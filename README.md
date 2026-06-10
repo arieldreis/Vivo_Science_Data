@@ -1,6 +1,6 @@
 # 📊 Maratona de Ciência de Dados - Vivo
 
-![Desafio dos Dados 2026](./a0ffbaca-85c7-46af-aa95-03bd9d02ac10.png)
+![Desafio dos Dados 2026](./assets/a0ffbaca-85c7-46af-aa95-03bd9d02ac10.png)
 
 ## 🚀 Sobre o Projeto
 
