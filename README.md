@@ -1,6 +1,6 @@
 # 📊 Maratona de Ciência de Dados - Vivo
 
-![Desafio dos Dados 2026](https://github.com/arieldreis/Vivo_Science_Data/blob/main/dashboard_inteligente/assets/a0ffbaca-85c7-46af-aa95-03bd9d02ac10.png)
+![Desafio dos Dados 2026](https://github.com/arieldreis/Vivo_Science_Data/blob/main/dashboard_inteligente/assets/desafio_dos_dados_1080p%20(1).png)
 
 ## 🚀 Sobre o Projeto
 
