@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Entregas — Monitor Operacional</title>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-dot"></div>
+    <div>
+      <div class="logo-text">MONITOR DE ENTREGAS</div>
+      <div class="logo-sub">Painel Operacional · Amostra Didática</div>
+    </div>
+  </div>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);" id="clock"></div>
+</header>
+
+<div class="filters">
+  <div class="filter-group">
+    <label>Transportadora</label>
+    <select id="filtro-transportadora" onchange="aplicarFiltros()">
+      <option value="todas">Todas</option>
+      <option value="RotaMax">RotaMax</option>
+      <option value="ViaCargo">ViaCargo</option>
+      <option value="FlashLog">FlashLog</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Região</label>
+    <select id="filtro-regiao" onchange="aplicarFiltros()">
+      <option value="todas">Todas</option>
+      <option value="Sudeste">Sudeste</option>
+      <option value="Sul">Sul</option>
+      <option value="Nordeste">Nordeste</option>
+      <option value="Norte">Norte</option>
+      <option value="Centro-Oeste">Centro-Oeste</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Status</label>
+    <select id="filtro-status" onchange="aplicarFiltros()">
+      <option value="todos">Todos</option>
+      <option value="atrasado">Atrasados</option>
+      <option value="no-prazo">No prazo</option>
+    </select>
+  </div>
+</div>
+
+<main>
+
+  <!-- ALERTA CRÍTICO -->
+  <div class="alert-strip" id="alert-strip">
+    <div class="alert-icon">⚠</div>
+    <div class="alert-body" id="alert-text"></div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="kpi-row">
+    <div class="kpi info">
+      <div class="kpi-label">Total de Entregas</div>
+      <div class="kpi-value" id="kpi-total">—</div>
+      <div class="kpi-sub">na seleção atual</div>
+    </div>
+    <div class="kpi danger">
+      <div class="kpi-label">Atrasadas</div>
+      <div class="kpi-value" id="kpi-atrasadas">—</div>
+      <div class="kpi-sub" id="kpi-pct-atraso">—% do total</div>
+    </div>
+    <div class="kpi ok">
+      <div class="kpi-label">No Prazo</div>
+      <div class="kpi-value" id="kpi-prazo">—</div>
+      <div class="kpi-sub" id="kpi-pct-prazo">—% do total</div>
+    </div>
+    <div class="kpi warn">
+      <div class="kpi-label">Atraso Médio</div>
+      <div class="kpi-value" id="kpi-atraso-medio">—</div>
+      <div class="kpi-sub">dias de excesso (atrasadas)</div>
+    </div>
+  </div>
+
+  <!-- CHARTS ROW -->
+  <div class="grid-3">
+
+    <!-- Transportadoras -->
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Atrasos por Transportadora</div>
+      <div class="bar-list" id="bar-transportadora"></div>
+    </div>
+
+    <!-- Regiões -->
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Atrasos por Região</div>
+      <div class="bar-list" id="bar-regiao"></div>
+    </div>
+
+    <!-- Ranking crítico -->
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Entregas Mais Críticas</div>
+      <div class="rank-list" id="rank-critico"></div>
+    </div>
+
+  </div>
+
+  <!-- TABLE + DONUT -->
+  <div class="grid-2">
+
+    <!-- Tabela -->
+    <div class="card" style="grid-column: 1 / 3;">
+      <div class="card-title"><span class="dot"></span>Registro Detalhado das Entregas</div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Transportadora</th>
+            <th>Região</th>
+            <th>Prazo (d)</th>
+            <th>Real (d)</th>
+            <th>Excesso</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-body"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  Dashboard didático · dados de amostra · construído em HTML/CSS/JS
+</footer>
+
+
+</body>
+</html>
