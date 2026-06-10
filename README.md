@@ -1,5 +1,7 @@
 # 📊 Maratona de Ciência de Dados - Vivo
 
+![Desafio dos Dados 2026](./a0ffbaca-85c7-46af-aa95-03bd9d02ac10.png)
+
 ## 🚀 Sobre o Projeto
 
 Este repositório contém minhas atividades e desafios desenvolvidos durante a **Maratona de Ciência de Dados da Vivo**.
@@ -79,11 +81,6 @@ Atualmente estou realizando os desafios propostos pela Maratona de Ciência de D
 ### Ariel Marinho
 
 Estudante de Desenvolvimento de Sistemas, apaixonado por tecnologia, programação, ciência de dados e desenvolvimento de soluções inovadoras.
-
-### 📫 Contato
-
-- GitHub: https://github.com/arieldreis
-- LinkedIn: https://linkedin.com/in/arielmarinho16
 
 ---
 
